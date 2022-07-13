@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UseCases.Bullets;
 using UseCases.Enemys;
+using UseCases.Services.PoolService;
 
 namespace UseCases.Ship
 {
@@ -9,15 +12,16 @@ namespace UseCases.Ship
     {
         public float speed;
         public float shootCooldown;
-        public Bullet.Bullet bulletPrefab;
+        public GameObject bulletPrefab;
         public Transform pointToSpawn;
         public Image cooldownBar;
 
         Camera _myCamera;
         bool _canShoot;
         Coroutine _shootCDCor;
-
-
+        private Bullet _bullet;
+         
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -45,9 +49,10 @@ namespace UseCases.Ship
 
         void Shoot()
         {
-            Bullet.Bullet b = Instantiate(bulletPrefab, pointToSpawn.position, transform.rotation); //Instancio bala
-            b.timeToDie = shootCooldown;  //Le paso el cooldown como tiempo de vida
-            b.owner = this;  //Le paso que el owner es este script para que cuando mate un enemigo me avise
+            var bullet = bulletPrefab.Reuse<Bullet>(pointToSpawn.position, transform.rotation);
+            
+            bullet.timeToDie = shootCooldown;  //Le paso el cooldown como tiempo de vida
+            bullet.owner = this;  //Le paso que el owner es este script para que cuando mate un enemigo me avise
 
             _shootCDCor = StartCoroutine(ShootCooldown());  //Corrutina del cooldown para volver a disparar
         }
@@ -62,7 +67,6 @@ namespace UseCases.Ship
 
             _canShoot = true;
             CompletedFireCooldown();
-
         }
 
         //Setea cambios de la barra de CD del UI

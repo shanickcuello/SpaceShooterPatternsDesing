@@ -1,26 +1,24 @@
 ﻿using UnityEngine;
 using UseCases.Enemys;
+using UseCases.Services.PoolService;
 
-namespace UseCases.Bullet
+namespace UseCases.Bullets
 {
-    public class Bullet : MonoBehaviour
+    public class Bullet : MonoBehaviour, IPoolable
     {
         public float speed;
         public float timeToDie;
         public Ship.Ship owner;
 
-        // Update is called once per frame
         void Update()
         {
-            //Movimiento
             transform.position += transform.right * speed * Time.deltaTime;
 
-            //Lifetime
             timeToDie -= Time.deltaTime;
 
             if (timeToDie<= 0)
             {
-                Destroy(gameObject);
+                gameObject.Release();
             }
         }
 
@@ -33,9 +31,18 @@ namespace UseCases.Bullet
                 owner.TargetHit(); //Le digo al player que le pegue
 
                 en.GetShot(); //Le hago damage al enemigo
-
-                Destroy(gameObject); //Me destruyo
+                gameObject.Reuse();
             }
+        }
+
+        public void OnReuse()
+        {
+            
+        }
+
+        public void OnRelease()
+        {
+            
         }
     }
 }
