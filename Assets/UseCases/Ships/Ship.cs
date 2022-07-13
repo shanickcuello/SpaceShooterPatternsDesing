@@ -49,15 +49,16 @@ namespace UseCases.Ships
         void Shoot()
         {
             var bullet = bulletPrefab.Reuse<Bullet>(pointToSpawn.position, transform.rotation);
+            //subscribe to bullet hit event
+            bullet.OnHit += OnTargetHit;
             
             bullet.timeToDie = shootCooldown;  //Le paso el cooldown como tiempo de vida
-            bullet.owner = this;  //Le paso que el owner es este script para que cuando mate un enemigo me avise
 
             _shootCDCor = StartCoroutine(ShootCooldown());  //Corrutina del cooldown para volver a disparar
         }
-
+        
         //Funcion para cuando la bala toca un enemigo
-        public void TargetHit()
+        public void OnTargetHit()
         {
             if (_shootCDCor != null)
             {
