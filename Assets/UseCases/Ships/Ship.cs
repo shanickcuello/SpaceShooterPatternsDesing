@@ -58,8 +58,9 @@ namespace UseCases.Ships
         }
         
         //Funcion para cuando la bala toca un enemigo
-        public void OnTargetHit()
+        public void OnTargetHit(Bullet bullet)
         {
+            bullet.OnHit -= OnTargetHit;
             if (_shootCDCor != null)
             {
                 StopCoroutine(_shootCDCor);

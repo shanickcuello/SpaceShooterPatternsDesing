@@ -9,7 +9,7 @@ namespace UseCases.Bullets
     {
         public float speed;
         public float timeToDie;
-        public event Action OnHit;
+        public event Action<Bullet> OnHit;
 
         void Update()
         {
@@ -29,7 +29,7 @@ namespace UseCases.Bullets
 
             if (en)
             {
-                OnHit?.Invoke();
+                OnHit?.Invoke(this);
 
                 en.GetShot(); //Le hago damage al enemigo
                 gameObject.Release();
