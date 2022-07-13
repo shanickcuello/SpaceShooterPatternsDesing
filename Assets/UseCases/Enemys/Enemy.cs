@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UseCases.Rounds;
+using UseCases.Services.PoolService;
 
 namespace UseCases.Enemys
 {
-    public class Enemy : MonoBehaviour
+    public class Enemy : MonoBehaviour, IPoolable
     {
         public float speed;
         public Transform target;
@@ -26,7 +27,17 @@ namespace UseCases.Enemys
         public void GetShot()
         {
             manager.EnemyDead(); //Le digo al manager que mori
-            Destroy(gameObject); //Me destruyo
+            gameObject.Release();
+        }
+
+        public void OnReuse()
+        {
+            
+        }
+
+        public void OnRelease()
+        {
+            
         }
     }
 }

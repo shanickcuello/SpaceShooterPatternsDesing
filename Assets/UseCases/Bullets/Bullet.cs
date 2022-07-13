@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UseCases.Enemys;
 using UseCases.Services.PoolService;
+using UseCases.Ships;
 
 namespace UseCases.Bullets
 {
@@ -8,7 +9,7 @@ namespace UseCases.Bullets
     {
         public float speed;
         public float timeToDie;
-        public Ship.Ship owner;
+        public Ship owner;
 
         void Update()
         {
@@ -31,18 +32,16 @@ namespace UseCases.Bullets
                 owner.TargetHit(); //Le digo al player que le pegue
 
                 en.GetShot(); //Le hago damage al enemigo
-                gameObject.Reuse();
+                gameObject.Release();
             }
         }
 
         public void OnReuse()
         {
-            
         }
 
         public void OnRelease()
         {
-            
         }
     }
 }

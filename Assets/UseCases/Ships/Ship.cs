@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UseCases.Bullets;
 using UseCases.Enemys;
 using UseCases.Services.PoolService;
 
-namespace UseCases.Ship
+namespace UseCases.Ships
 {
     public class Ship : MonoBehaviour
     {

@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UseCases.Enemys;
+using UseCases.Services.PoolService;
+using UseCases.Ships;
 
 namespace UseCases.Rounds
 {
     public class RoundManager : MonoBehaviour
     {
-        public Enemy enemyPrefab; 
+        public GameObject enemyPrefab; 
 
         public Transform spawnPoints;
 
@@ -20,7 +22,7 @@ namespace UseCases.Rounds
     
         void Start()
         {
-            _target = FindObjectOfType<Ship.Ship>().transform; //target que le voy a asignar al enemigo
+            _target = FindObjectOfType<Ship>().transform; //target que le voy a asignar al enemigo
 
             _spawnPositions = spawnPoints.GetComponentsInChildren<Transform>(); //Los puntos de spawn para los enemigos
         
@@ -57,9 +59,10 @@ namespace UseCases.Rounds
             {
                 int posToSpawn = Random.Range(0, _spawnPositions.Length); //Posicion en la que va a spawnear
 
-                var e = Instantiate(enemyPrefab, _spawnPositions[posToSpawn].position, Quaternion.identity);  //Instancio enemy
-                e.manager = this; //Le paso el manager para que al morir le avise que reduza uno en _totalEnemies
-                e.target = _target; //Le paso el target
+                var enemy = enemyPrefab.Reuse<Enemy>( _spawnPositions[posToSpawn].position, transform.rotation);
+                
+                enemy.manager = this; //Le paso el manager para que al morir le avise que reduza uno en _totalEnemies
+                enemy.target = _target; //Le paso el target
 
                 enemiesCont++;
 

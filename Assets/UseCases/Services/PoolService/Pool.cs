@@ -5,8 +5,8 @@ namespace UseCases.Services.PoolService
 {
     public class Pool
     {
-        private readonly Poolable _prefab;
-        private readonly Stack<Poolable> _instances;
+        private readonly Factory _prefab;
+        private readonly Stack<Factory> _instances;
         private readonly Quaternion _rotation;
         private readonly Vector3 _scale;
 
@@ -15,18 +15,18 @@ namespace UseCases.Services.PoolService
 
         private const int InitialSize = 128;
 
-        public Pool(GameObject prefab)
+        private Pool(GameObject prefab)
         {
-            _prefab = prefab.GetComponent<Poolable>();
+            _prefab = prefab.GetComponent<Factory>();
 
             if (_prefab == null)
             {
-                _prefab = Object.Instantiate(prefab).AddComponent<Poolable>();
+                _prefab = Object.Instantiate(prefab).AddComponent<Factory>();
                 Object.DontDestroyOnLoad(_prefab);
                 _prefab.gameObject.SetActive(false);
             }
             
-            _instances = new Stack<Poolable>(InitialSize);
+            _instances = new Stack<Factory>(InitialSize);
             PrefabLookup.Add(prefab, this);
 
             var transform = prefab.transform;
@@ -106,7 +106,7 @@ namespace UseCases.Services.PoolService
 
         public void Release(GameObject instance)
         {
-            var poolable = instance.GetComponent<Poolable>();
+            var poolable = instance.GetComponent<Factory>();
             poolable.OnRelease();
 
             instance.SetActive(false);
@@ -119,7 +119,7 @@ namespace UseCases.Services.PoolService
             _instances.Push(poolable);
         }
 
-        private Poolable GetInstance()
+        private Factory GetInstance()
         {
             int count = _instances.Count;
 
@@ -166,7 +166,7 @@ namespace UseCases.Services.PoolService
             }
         }
 
-        private Poolable CreateInstance()
+        private Factory CreateInstance()
         {
             var instance = Object.Instantiate(_prefab);
             var instanceGameObject = instance.gameObject;

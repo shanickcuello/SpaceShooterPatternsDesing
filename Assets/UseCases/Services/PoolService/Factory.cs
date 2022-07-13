@@ -4,7 +4,7 @@ using UnityEngine;
 namespace UseCases.Services.PoolService
 {
 	[DisallowMultipleComponent]
-	internal sealed class Poolable : MonoBehaviour
+	internal sealed class Factory : MonoBehaviour
 	{
 		private IPoolable[] _poolables = Array.Empty<IPoolable>();
 		private bool _isInitialized = false;
