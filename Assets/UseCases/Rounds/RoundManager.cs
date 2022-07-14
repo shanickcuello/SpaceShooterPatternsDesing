@@ -8,7 +8,7 @@ namespace UseCases.Rounds
 {
     public class RoundManager : MonoBehaviour
     {
-        public GameObject enemyPrefab; 
+        public GameObject enemyPrefab;
 
         public Transform spawnPoints;
 
@@ -19,18 +19,20 @@ namespace UseCases.Rounds
         int _totalEnemies;
 
         int _actualRound;
-    
+
         void Start()
         {
             _target = FindObjectOfType<Ship>().transform; //target que le voy a asignar al enemigo
 
             _spawnPositions = spawnPoints.GetComponentsInChildren<Transform>(); //Los puntos de spawn para los enemigos
-        
+
             StartCoroutine(SpawnEnemies());
         }
 
-        public void EnemyDead()
+        public void EnemyDead(Enemy enemy)
         {
+            Debug.Log("Enemy dead");
+            enemy.onDie -= EnemyDead;
             _totalEnemies--; //Murio un enemy
 
             if (_totalEnemies <= 0) //Si no hay mas enemies
@@ -54,21 +56,19 @@ namespace UseCases.Rounds
             int enemiesToSpawn = _totalEnemies;
 
             int enemiesCont = 0;
-        
+
             while (enemiesCont < enemiesToSpawn)
             {
                 int posToSpawn = Random.Range(0, _spawnPositions.Length); //Posicion en la que va a spawnear
 
-                var enemy = enemyPrefab.Reuse<Enemy>( _spawnPositions[posToSpawn].position, transform.rotation);
-                
-                enemy.manager = this; //Le paso el manager para que al morir le avise que reduza uno en _totalEnemies
+                var enemy = enemyPrefab.Reuse<Enemy>(_spawnPositions[posToSpawn].position, transform.rotation);
+                enemy.onDie += EnemyDead;
                 enemy.target = _target; //Le paso el target
 
                 enemiesCont++;
 
                 yield return new WaitForSeconds(0.5f);
             }
-        
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UseCases.Rounds;
 using UseCases.Services.PoolService;
 
@@ -10,6 +11,7 @@ namespace UseCases.Enemys
         public Transform target;
 
         public RoundManager manager;
+        public event Action<Enemy> onDie;
 
 
         // Update is called once per frame
@@ -26,7 +28,7 @@ namespace UseCases.Enemys
 
         public void GetShot()
         {
-            manager.EnemyDead(); //Le digo al manager que mori
+            onDie?.Invoke(this);
             gameObject.Release();
         }
 
