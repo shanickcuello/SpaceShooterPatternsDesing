@@ -3,6 +3,7 @@ using UnityEngine;
 using UseCases.Enemys;
 using UseCases.Services.PoolService;
 using UseCases.Ships;
+using UseCases.Utils.LooUpTableUtil;
 
 namespace UseCases.Rounds
 {
@@ -19,9 +20,17 @@ namespace UseCases.Rounds
         int _totalEnemies;
 
         int _actualRound;
+        LookUpTable<int, int> _enemyTable;
 
         void Start()
         {
+            _enemyTable = new LookUpTable<int, int>(CalculateEnemiesToSpawn);
+            for (int i = 1; i <= 10; i++)
+            {
+                _enemyTable.ReturnValue(i);
+            }
+            
+            
             _target = FindObjectOfType<Ship>().transform; //target que le voy a asignar al enemigo
 
             _spawnPositions = spawnPoints.GetComponentsInChildren<Transform>(); //Los puntos de spawn para los enemigos
