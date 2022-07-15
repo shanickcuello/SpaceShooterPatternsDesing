@@ -18,16 +18,10 @@ namespace Features.Player
         private Camera _camera;
 
         private float shootTimer;
+
         private void Awake()
         {
             GetDependencies();
-        }
-
-        private void GetDependencies()
-        {
-            _camera = Camera.main;
-            CanShoot = true;
-            myView = GetComponent<PlayerView>();
         }
 
         void Start()
@@ -66,6 +60,7 @@ namespace Features.Player
             position.z = transform.position.z;
             transform.right = position - transform.position;
         }
+
         public void Move(float horizontal, float vertical)
         {
             if (horizontal != 0 || vertical != 0)
@@ -73,50 +68,63 @@ namespace Features.Player
             else
                 myView.SoundMoveStop();
 
-            transform.position += (_camera.transform.right * horizontal + _camera.transform.up * vertical).normalized * speed * Time.deltaTime;
+            transform.position += (_camera.transform.right * horizontal + _camera.transform.up * vertical).normalized *
+                                  speed * Time.deltaTime;
         }
+
         public void OnDisable()
         {
             myView.SoundMoveStop();
         }
+
         public void ShootSinuous()
-        {        
+        {
             var bullet = SpawnerBullet.Instance.GetBulletFromPool(gameObject.transform, shootCooldown).SetMovement();
-            IMove sinuousMove = new SinuousMove(bullet.transform, bullet.speed); 
-            bullet.SetMovement(sinuousMove); 
+            IMove sinuousMove = new SinuousMove(bullet.transform, bullet.speed);
+            bullet.SetMovement(sinuousMove);
             bullet.Subscribe(this);
         }
+
         public void ShootLineal()
         {
             var bullet = SpawnerBullet.Instance.GetBulletFromPool(gameObject.transform, shootCooldown).SetMovement();
-            IMove linealMove = new LinealMove(bullet.transform, bullet.speed); 
-            bullet.SetMovement(linealMove); 
+            IMove linealMove = new LinealMove(bullet.transform, bullet.speed);
+            bullet.SetMovement(linealMove);
             bullet.Subscribe(this);
         }
+
         public void ShootCooldown()
         {
             CanShoot = false;
             shootTimer = 0;
         }
-        
+
         public void TargetHit()
         {
             CanShoot = true;
             myView.CompletedFireCooldown();
         }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (!collision.GetComponent<Enemy>()) return;
             myView.SoundDestroy();
             UnityEngine.SceneManagement.SceneManager.LoadScene(2);
         }
-        
+
         public void Notify(string action)
         {
             if (action == "TargetHit")
             {
                 TargetHit();
             }
+        }
+
+        private void GetDependencies()
+        {
+            _camera = Camera.main;
+            CanShoot = true;
+            myView = GetComponent<PlayerView>();
         }
     }
 }

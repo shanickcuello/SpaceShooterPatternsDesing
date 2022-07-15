@@ -28,9 +28,9 @@ namespace Features.Asteroid
             var position = transform.position;
             enemyFromPool.SetManager(manager).SetTarget(_target).SetPosition(position).SetRotation(Quaternion.identity).SetNotify(false);
 
-            Enemy b = manager.GetEnemyFromPool();
+            Enemy enemy = manager.GetEnemyFromPool();
             Vector3 offset = new Vector3(1.5f, 0, 0);
-            b.SetManager(manager).SetTarget(_target).SetPosition(position + offset).SetRotation(Quaternion.identity).SetNotify(false);
+            enemy.SetManager(manager).SetTarget(_target).SetPosition(position + offset).SetRotation(Quaternion.identity).SetNotify(false);
 
             return enemyFromPool;
         }

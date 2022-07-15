@@ -13,25 +13,28 @@ namespace Features.Player
             cooldownBar.color = Color.green;
             cooldownBar.fillAmount = 1;
         }
+
         public void FillBar(float amount)
         {
             cooldownBar.color = Color.red;
             cooldownBar.fillAmount = amount;
         }
+
         public void SoundShoot()
         {
             AudioManager.Instance.Play("Player_Shoot");
         }
+
         public void SoundMovePlay()
         {
             AudioManager.Instance.Play("Player_Move");
         }
+
         public void SoundMoveStop()
         {
-            try { AudioManager.Instance.Stop("Player_Move"); }
-            catch { Debug.Log("Audio missing"); }
-        
+            AudioManager.Instance.Stop("Player_Move");
         }
+
         public void SoundDestroy()
         {
             AudioManager.Instance.Play("Player_Death");

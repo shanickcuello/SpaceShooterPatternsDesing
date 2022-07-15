@@ -25,26 +25,15 @@ namespace Features.Audio
         public void Play(string soundKey)
         {
             Sound sound = Array.Find(sounds, item => item.name == soundKey);
-            if (sound == null)
-            {
-                Debug.LogWarning("Sound: " + name + " not found!");
-                return;
-            }
-
             if(!sound.source.isPlaying)
                 sound.Play();
         }
         public void Stop(string soundKey)
         {
             Sound sound = Array.Find(sounds, item => item.name == soundKey);
-            if (sound == null)
-            {
-                Debug.LogWarning("Sound: " + name + " not found!");
-                return;
-            }
             sound.Stop();
         }
-        [System.Serializable]
+        [Serializable]
         public class Sound
         {
             public string name;

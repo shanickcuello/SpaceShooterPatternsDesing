@@ -27,7 +27,7 @@ namespace Features.Rounds
 
         private void Awake()
         {
-            screenConfig = GameObject.FindObjectOfType<Config>();
+            screenConfig = FindObjectOfType<Config>();
             roundEnded = true;
         }
         void Start()
@@ -107,8 +107,8 @@ namespace Features.Rounds
                 transform1.position = _spawnPositions[posToSpawn].position; 
                 transform1.rotation = Quaternion.identity;
 
-                newEnemy.Subscribe(this); //Suscribo como observer en el enemigo
-                newEnemy.Subscribe(screenConfig); //Suscribo screenConfig para Score
+                newEnemy.Subscribe(this);
+                newEnemy.Subscribe(screenConfig);
                 _spawnedEnemiesAmount++;
                 yield return new WaitForSeconds(0.5f);
             }

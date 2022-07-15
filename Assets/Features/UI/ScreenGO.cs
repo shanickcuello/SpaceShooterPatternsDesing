@@ -1,43 +1,44 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Features.Rounds;
-using Features.UI;
 using UnityEngine;
 
-public class ScreenGO : IScreen
+namespace Features.UI
 {
-    Dictionary<Behaviour, bool> _before = new Dictionary<Behaviour, bool>();
-
-    public Transform root;
-
-    public ScreenGO(Transform root)
+    public class ScreenGO : IScreen
     {
-        this.root = root;
-    }
-    
-    public void Activate()
-    {
-        foreach (var keyValue in _before)
+        Dictionary<Behaviour, bool> _before = new Dictionary<Behaviour, bool>();
+
+        public Transform root;
+
+        public ScreenGO(Transform root)
         {
-            keyValue.Key.enabled = keyValue.Value;
+            this.root = root;
         }
-        root.GetComponentInChildren<RoundManager>().ContinueSpawn();
-        _before.Clear();
-    }
-
-    public void Deactivate()
-    {
-        root.GetComponentInChildren<RoundManager>().StopSpawn();
-        foreach (var b in root.GetComponentsInChildren<Behaviour>())
-        {            
-            _before[b] = b.enabled;
-            b.enabled = false;
+    
+        public void Activate()
+        {
+            foreach (var keyValue in _before)
+            {
+                keyValue.Key.enabled = keyValue.Value;
+            }
+            root.GetComponentInChildren<RoundManager>().ContinueSpawn();
+            _before.Clear();
         }
-    }
 
-    public string Free()
-    {
-        GameObject.Destroy(root.gameObject);
-        return "Deletie una pantalla jugable";
+        public void Deactivate()
+        {
+            root.GetComponentInChildren<RoundManager>().StopSpawn();
+            foreach (var b in root.GetComponentsInChildren<Behaviour>())
+            {            
+                _before[b] = b.enabled;
+                b.enabled = false;
+            }
+        }
+
+        public string Free()
+        {
+            GameObject.Destroy(root.gameObject);
+            return "Deletie una pantalla jugable";
+        }
     }
 }

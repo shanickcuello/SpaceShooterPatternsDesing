@@ -2,77 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d135354b-fad7-4e1b-b494-5d79f1ad94d5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShooterPatternsDesing/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/AudioManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/AudioManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/Bullet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/Bullet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/Bullet.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/Bullet.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/IBullet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/IBullet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/MovementTypes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/MovementTypes.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/SinusoidalBullet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/SinusoidalBullet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Enemys.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Enemys/Asteroid.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Enemys/Asteroid.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Enemys/Enemy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Enemys/Enemy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Rounds.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Rounds/DefeatScreen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Rounds/DefeatScreen.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Rounds/RoundManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Rounds/RoundManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/IController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/IController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/IFormulaMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/IFormulaMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/LinealFormula.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/LinealFormula.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/SinusoidalFormula.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/SinusoidalFormula.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Click.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Click.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Click_2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Click_2.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Countdown.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Countdown.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/LooUpTableUtil.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/LooUpTableUtil/LookUpTable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/LooUpTableUtil/LookUpTable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/Observer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/Observer/IObservable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/Observer/IObservable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/Observer/IObserver.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/Observer/IObserver.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/Factory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/Factory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/IPoolable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/IPoolable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/Pool.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/Pool.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/PoolHelper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/PoolHelper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/PoolInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/PoolInstaller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShooterPatternsDesing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceShooterPatternsDesing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/Asteroid/Asteroid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/Asteroid/Asteroid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/Audio/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/Player/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/Player/PlayerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/Player/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/Player/PlayerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/Rounds/RoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/Rounds/RoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/UI/ButtonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/UI/ButtonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/UI/ScreenGO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/UI/ScreenGO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Utils/LookUpTable/LookUpTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Utils/LookUpTable/LookUpTable.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,11 +29,16 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/ShapeEditor/ShapeEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b1444477c1d41c692ef6c02a838308529ac30/9b/642a3c06/SerializableAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/SpriteEditorModule/TextureImporterDataProviderImplementation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/Interface/IGL.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.timeline/Editor/State/WindowState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.timeline/Editor/Utilities/TimelineKeyboardNavigation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.timeline/Editor/treeview/ManipulationsTracks.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/Interface/ISpriteEditorDataProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.timeline/Editor/Items/ItemsUtils.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor/PaintableGrid.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -144,7 +87,8 @@
       <option name="presentableId" value="Default" />
       <updated>1657858447170</updated>
       <workItem from="1657858454240" duration="840000" />
-      <workItem from="1657859753257" duration="3059000" />
+      <workItem from="1657859753257" duration="3306000" />
+      <workItem from="1657915563288" duration="686000" />
     </task>
     <servers />
   </component>

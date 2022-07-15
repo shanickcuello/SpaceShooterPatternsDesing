@@ -23,10 +23,6 @@ namespace Features.UI
         {
             BtnPlay();
         }
-        public void BtnContinue()
-        {
-        
-        }
         public void BtnLanguage()
         {
             if (LanguageManager.selectedLanguage == Language.eng)
