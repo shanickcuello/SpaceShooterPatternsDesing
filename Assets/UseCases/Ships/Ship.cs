@@ -9,6 +9,7 @@ namespace UseCases.Ships
 {
     public class Ship : MonoBehaviour
     {
+        [SerializeField] private float shootSpeed;
         public float speed;
         public float shootCooldown;
         public GameObject bulletPrefab;
@@ -19,11 +20,15 @@ namespace UseCases.Ships
         bool _canShoot;
         Coroutine _shootCDCor;
         private Bullet _bullet;
-         
-        
+        private IFormulaMovement _linealFormula;
+        private IFormulaMovement _sinusoidalFormula;
+
+
         // Start is called before the first frame update
         void Start()
         {
+            _linealFormula = new LinealFormula();
+            _sinusoidalFormula = new SinusoidalFormula();
             _myCamera = Camera.main;
             _canShoot = true;
             CompletedFireCooldown();
@@ -37,26 +42,30 @@ namespace UseCases.Ships
             lookAtPos.z = transform.position.z;
             transform.right = lookAtPos - transform.position;
 
-            transform.position += (_myCamera.transform.right * Input.GetAxisRaw("Horizontal") + _myCamera.transform.up * Input.GetAxisRaw("Vertical")).normalized * speed * Time.deltaTime;
+            transform.position +=
+                (_myCamera.transform.right * Input.GetAxisRaw("Horizontal") +
+                 _myCamera.transform.up * Input.GetAxisRaw("Vertical")).normalized * speed * Time.deltaTime;
 
             //Disparo
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && _canShoot)
             {
-                if (_canShoot) Shoot();
+                Shoot(_linealFormula);
+            }
+            else if (Input.GetMouseButtonDown(1) && _canShoot)
+            {
+                Shoot(_sinusoidalFormula);
             }
         }
 
-        void Shoot()
+        void Shoot(IFormulaMovement shootingType)
         {
-            var bullet = bulletPrefab.Reuse<Bullet>(pointToSpawn.position, transform.rotation);
-            //subscribe to bullet hit event
+            var bulletGameobject = bulletPrefab.Reuse(pointToSpawn.position, transform.rotation);
+            IBullet bullet = bulletGameobject.GetComponent<Bullet>();
             bullet.OnHit += OnTargetHit;
-            
-            bullet.timeToDie = shootCooldown;  //Le paso el cooldown como tiempo de vida
-
-            _shootCDCor = StartCoroutine(ShootCooldown());  //Corrutina del cooldown para volver a disparar
+            bullet.SetTimeToDie(shootCooldown).SetSpeed(shootSpeed).SetMovement(shootingType);
+            _shootCDCor = StartCoroutine(ShootCooldown()); //Corrutina del cooldown para volver a disparar
         }
-        
+
         //Funcion para cuando la bala toca un enemigo
         public void OnTargetHit(Bullet bullet)
         {
@@ -96,7 +105,7 @@ namespace UseCases.Ships
             CompletedFireCooldown();
             _canShoot = true;
         }
-    
+
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -105,5 +114,30 @@ namespace UseCases.Ships
                 UnityEngine.SceneManagement.SceneManager.LoadScene(1);
             }
         }
+    }
+    
+    public struct LinealFormula : IFormulaMovement
+    {
+        public Vector3 Get(Transform transform, float speed)
+        {
+            return transform.right * (speed * Time.deltaTime);
+        }
+    }
+    
+    public struct SinusoidalFormula : IFormulaMovement
+    {
+        public Vector3 Get(Transform transform, float speed)
+        {
+            Vector3 myUp = transform.up * Mathf.Sin(Time.time * speed * 5) * Time.deltaTime * 2;
+
+            Vector3 myRight = transform.right * speed * Time.deltaTime;
+
+            return myUp + myRight;
+        }
+    }
+
+    public interface IFormulaMovement
+    {
+        Vector3 Get(Transform transform, float speed);
     }
 }

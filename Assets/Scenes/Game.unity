@@ -904,6 +904,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1674899392533732568, guid: 843f30aa3116f1d48b1c2185b2f8c981,
         type: 3}
+    - target: {fileID: 222744306, guid: 3e7cadfdb278646409859f968a25a47d, type: 3}
+      propertyPath: shootSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1080991531272660513, guid: 3e7cadfdb278646409859f968a25a47d,
         type: 3}
       propertyPath: m_LocalPosition.x
