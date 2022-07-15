@@ -21,7 +21,7 @@ namespace UseCases.Bullets
             private set => _speed = value;
         }
 
-        protected virtual void Update()
+        protected virtual void LateUpdate()
         {
             Move();
             TimeToDie();
@@ -72,13 +72,9 @@ namespace UseCases.Bullets
             }
         }
 
-        public void OnReuse()
-        {
-        }
+        public void OnReuse(){}
 
-        public void OnRelease()
-        {
-        }
+        public void OnRelease(){}
 
         public void Subscribe(IObserver obs)
         {

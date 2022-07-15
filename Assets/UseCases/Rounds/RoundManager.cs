@@ -31,7 +31,7 @@ namespace UseCases.Rounds
             }
             
             
-            _target = FindObjectOfType<Ship>().transform; //target que le voy a asignar al enemigo
+            _target = FindObjectOfType<ShipModel>().transform; //target que le voy a asignar al enemigo
 
             _spawnPositions = spawnPoints.GetComponentsInChildren<Transform>(); //Los puntos de spawn para los enemigos
 
