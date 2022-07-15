@@ -1,0 +1,13 @@
+Idioma;ID;Texto
+spa;ID_Play;Jugar
+eng;ID_Play;Play
+spa;ID_Credits;Creditos
+eng;ID_Credits;Credits
+spa;ID_Quit;Salir
+eng;ID_Quit;Quit
+eng;ID_Language;Language
+spa;ID_Language;Lenguaje
+eng;ID_Back;Back
+spa;ID_Back;Atras
+eng;ID_Pause;Game Paused
+spa;ID_Pause;Juego Pauseado

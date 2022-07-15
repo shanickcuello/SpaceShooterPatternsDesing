@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d135354b-fad7-4e1b-b494-5d79f1ad94d5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceShooterPatternsDesing/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/AudioManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/AudioManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/Bullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/Bullet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/Bullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/Bullet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/IBullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/IBullet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/MovementTypes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/MovementTypes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/SinusoidalBullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Bullets/SinusoidalBullet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Enemys.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Enemys/Asteroid.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Enemys/Asteroid.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Enemys/Enemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Enemys/Enemy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Rounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Rounds/DefeatScreen.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Rounds/DefeatScreen.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Rounds/RoundManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Rounds/RoundManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/IController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/IController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/IFormulaMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/IFormulaMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/LinealFormula.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/LinealFormula.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipModel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/ShipView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/SinusoidalFormula.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Ships/SinusoidalFormula.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Click.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Click.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Click_2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Click_2.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Countdown.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Sound/Countdown.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/LooUpTableUtil.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/LooUpTableUtil/LookUpTable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/LooUpTableUtil/LookUpTable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/Observer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/Observer/IObservable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/Observer/IObservable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/Observer/IObserver.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/Observer/IObserver.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/Factory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/Factory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/IPoolable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/IPoolable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/Pool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/Pool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/PoolHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/PoolHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/PoolInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UseCases/Utils/PoolService/PoolInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/SpriteEditorModule/TextureImporterDataProviderImplementation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/Interface/IGL.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.timeline/Editor/State/WindowState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.timeline/Editor/treeview/ManipulationsTracks.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.2.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.timeline/Editor/Items/ItemsUtils.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BxrBl80IIZUnSxLLuuPMUjHHCV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="rider.run.widget.enabled.cache" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d135354b-fad7-4e1b-b494-5d79f1ad94d5" name="Changes" comment="" />
+      <created>1657858447170</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657858447170</updated>
+      <workItem from="1657858454240" duration="840000" />
+      <workItem from="1657859753257" duration="3059000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
