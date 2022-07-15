@@ -3,11 +3,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UseCases.Bullets;
 using UseCases.Enemys;
+using UseCases.Services;
 using UseCases.Services.PoolService;
 
 namespace UseCases.Ships
 {
-    public class Ship : MonoBehaviour
+    public class Ship : MonoBehaviour, IObserver
     {
         [SerializeField] private float shootSpeed;
         public float speed;
@@ -60,16 +61,15 @@ namespace UseCases.Ships
         void Shoot(IFormulaMovement shootingType)
         {
             var bulletGameobject = bulletPrefab.Reuse(pointToSpawn.position, transform.rotation);
-            IBullet bullet = bulletGameobject.GetComponent<Bullet>();
-            bullet.OnHit += OnTargetHit;
+            var bullet = bulletGameobject.GetComponent<Bullet>();
+            bullet.Subscribe(this);
             bullet.SetTimeToDie(shootCooldown).SetSpeed(shootSpeed).SetMovement(shootingType);
             _shootCDCor = StartCoroutine(ShootCooldown()); //Corrutina del cooldown para volver a disparar
         }
 
         //Funcion para cuando la bala toca un enemigo
-        public void OnTargetHit(Bullet bullet)
+        public void OnTargetHit()
         {
-            bullet.OnHit -= OnTargetHit;
             if (_shootCDCor != null)
             {
                 StopCoroutine(_shootCDCor);
@@ -113,6 +113,11 @@ namespace UseCases.Ships
             {
                 UnityEngine.SceneManagement.SceneManager.LoadScene(1);
             }
+        }
+
+        public void Notify(EActions action)
+        {
+            if (action == EActions.TargetHit) OnTargetHit();
         }
     }
     

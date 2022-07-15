@@ -31,7 +31,6 @@ namespace UseCases.Rounds
 
         public void EnemyDead(Enemy enemy)
         {
-            Debug.Log("Enemy dead");
             enemy.onDie -= EnemyDead;
             _totalEnemies--; //Murio un enemy
 

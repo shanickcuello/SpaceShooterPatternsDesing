@@ -1,18 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UseCases.Enemys;
+using UseCases.Services;
 using UseCases.Services.PoolService;
 using UseCases.Ships;
 
 namespace UseCases.Bullets
 {
-    public class Bullet : MonoBehaviour, IPoolable, IBullet
+    public class Bullet : MonoBehaviour, IPoolable, IBullet, IObservable
     {
         private float _speed;
         private float _timeToDie;
         private IFormulaMovement _formulaMovement;
-        public event Action<Bullet> OnHit;
-        
+        List<IObserver> _observers = new List<IObserver>();
+
         public float Speed
         {
             get => _speed;
@@ -57,15 +59,14 @@ namespace UseCases.Bullets
                 gameObject.Release();
             }
         }
-        
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             Enemy en = collision.GetComponent<Enemy>();
 
             if (en)
             {
-                OnHit?.Invoke(this);
-
+                NotifyToObservers(EActions.TargetHit);
                 en.GetShot(); //Le hago damage al enemigo
                 gameObject.Release();
             }
@@ -73,11 +74,32 @@ namespace UseCases.Bullets
 
         public void OnReuse()
         {
-       
         }
 
         public void OnRelease()
         {
+        }
+
+        public void Subscribe(IObserver obs)
+        {
+            if (!_observers.Contains(obs))
+                _observers.Add(obs);
+        }
+
+        public void Unsubscribe(IObserver obs)
+        {
+            if (_observers.Contains(obs))
+            {
+                _observers.Remove(obs);
+            }
+        }
+
+        public void NotifyToObservers(EActions action)
+        {
+            foreach (var observer in _observers)
+            {
+                observer.Notify(action);
+            }
         }
     }
 }
